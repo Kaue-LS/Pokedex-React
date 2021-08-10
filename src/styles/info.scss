@@ -1,0 +1,325 @@
+$fonte-principal: 'Poppins', sans-serif;
+$fonte-secundaria: 'Londrina Solid', cursive;
+$--grass: #1fc435;
+$--poison: #6b137c;
+$--fire: #e4652a;
+$--flying: #1ba7df;
+$--water: #191375;
+$--bug: #237523;
+$--normal: #085d48;
+$--electric: #cedf34;
+$--ground: #b95e29;
+$--fairy: #bf58cf;
+$--fighting: #363f06;
+$--psychic: #000000;
+$--rock: #462b20;
+$--steel: #867a88;
+$--ice: #777edf;
+$--ghost: #43114b;
+$--dragon: #e7671e;
+
+@mixin centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin tema($cor) {
+  background-color: $cor;
+}
+.info {
+    position: relative;
+    padding: 5rem 5rem;
+    background-color: rgb(134, 172, 213);
+    width: 80%;
+    left: 10%;
+    flex-direction: column;
+  
+ 
+    &__header {
+      
+      font-size: 1.8em;
+    }
+  
+    &__body {
+ 
+  
+      &__characteristics {
+        border: 10px ridge rgb(22, 172, 157);
+        background-color: rgba(7, 92, 220, 0.549);
+        display: flex;
+        
+        padding: 0.5rem 2rem;
+        img {
+        
+          background-color: rgb(218, 217, 217);
+          border: 5px ridge  rgb(1, 72, 65);
+        
+          min-height: 30rem;
+          max-width: 30rem;
+          min-width: 10rem;
+          margin: 0 auto;
+        }
+        table{
+    
+          padding: 50px 5px;
+          border: 3px ridge rgb(1, 72, 65);
+          background-color: rgb(6, 84, 252);
+        }
+        &__row{
+          padding: 10px;
+          position: relative;
+          border-radius: 20px;
+          top: -100%;
+          width: 18rem;
+          display: flex;
+          border: 3px ridge rgb(139, 211, 204);
+          flex-direction: row;
+          background-color: rgb(189, 213, 221);
+          
+          
+        }
+   
+      }
+  
+      &__abilities {
+        padding:2rem 0;
+        p{
+          padding: 5px 5px;
+          background-color: rgb(189, 213, 221);;
+          border: 3px ridge rgb(139, 211, 204);
+
+        }
+        th{
+          display: inline;
+          flex-direction: column;
+          border-collapse: collapse;
+
+
+        }
+        td{
+          width: 50%;
+          
+          display:inline-table;
+          
+      
+        }
+        
+      }
+      &__data{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+      }
+  
+      &__status {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+
+        tr{
+          background-color: rgb(189, 213, 221);;
+          width: 100%;
+          flex-direction: column;
+          display: flex;
+    
+
+        }
+        td{
+          border: 3px ridge rgb(139, 211, 204);
+          width: 100%;
+          padding: 5px 10px;
+        }
+      }
+  
+      &__moves {
+        padding: 1rem 1rem;
+        width: 100%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        th{
+          border: 3px ridge rgb(139, 211, 204);
+          padding: 10px 18rem;
+          width: 80%;
+          flex-wrap: wrap;
+          background-color: rgb(189, 213, 221);;
+
+        }
+       td{
+        background-color: rgb(189, 213, 221);;
+
+         border: 3px ridge rgb(139, 211, 204);
+         border-collapse: collapse;
+          width: 20%;
+          padding: 10px 10px;
+          display: inline-flex;
+        flex-direction: row;
+       }
+      }
+  
+      &__type {
+        
+        padding: 0em 1rem;
+  
+        p {
+          background-color: rgb(189, 213, 221);;
+          border: 3px ridge rgb(139, 211, 204);
+          font-size: 22px;
+          text-align: center;
+          padding:5px 0px;
+          width: 100%;
+          
+        }
+  
+        &__button {
+          color: #ffffff;
+          border-radius: 0.4rem;
+          padding: 0.2rem 2.4rem;
+          border: 3px ridge rgb(139, 211, 204);
+          margin: 0.4rem 0 0;
+  
+          &--grass {
+            @include tema($--grass)
+          }
+  
+          &--poison {
+            @include tema($--poison)
+          }
+  
+          &--fire {
+            @include tema($--fire)
+          }
+  
+          &--flying {
+            @include tema($--flying)
+          }
+  
+          &--water {
+            @include tema($--water)
+          }
+  
+          &--bug {
+            @include tema($--bug)
+          }
+  
+          &--normal {
+            @include tema($--normal)
+          }
+  
+          &--electric {
+            @include tema($--electric)
+          }
+  
+          &--ground {
+            @include tema($--ground)
+          }
+  
+          &--fairy {
+            @include tema($--fairy)
+          }
+  
+          &--fighting {
+            @include tema($--fighting)
+          }
+  
+          &--psychic {
+            @include tema($--psychic)
+          }
+  
+          &--rock {
+            @include tema($--rock)
+          }
+  
+          &--steel {
+            @include tema($--steel)
+          }
+  
+          &--ice {
+            @include tema($--ice)
+          }
+  
+          &--ghost {
+            @include tema($--ghost)
+          }
+  
+          &--dragon {
+            @include tema($--dragon)
+          }
+        } 
+      }
+    }
+    &__footer{
+      &__link{
+        font-weight: bold;
+        color: white;
+        background-color: rgb(25, 135, 252);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        padding: 20px 30px;
+      }
+    }
+  }
+
+@media screen and (max-width:800px) {
+  .info{
+    &__body{
+    &__characteristics {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 20%;
+      }
+      table{
+        width: 20%;
+      }
+      &__row{
+        width: 50%;
+      }
+    }
+    &__abilities{
+      width: 50%;
+    }
+    &__type{
+      width: 100%;
+      &__button{
+        display: flex;
+        width: 100%;
+      }
+    }
+    &__data{
+      display: flex;
+      flex-direction: column;
+    }
+    &__moves {
+      padding: 1rem 1rem;
+      width: 100%;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      th{
+        border: 3px ridge rgb(139, 211, 204);
+        padding: 10px 1rem;
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: rgb(189, 213, 221);;
+
+      }
+     td{
+      background-color: rgb(189, 213, 221);;
+
+       border: 3px ridge rgb(139, 211, 204);
+       border-collapse: collapse;
+        width: 10rem;
+        padding: 10px 20px;
+        display: inline-flex;
+      flex-direction: column;
+     }
+    }
+
+   }
+  }
+
+  }
+
